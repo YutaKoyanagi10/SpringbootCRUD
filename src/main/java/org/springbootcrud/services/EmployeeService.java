@@ -2,9 +2,13 @@ package org.springbootcrud.services;
 
 import org.springbootcrud.model.entity.Employee;
 
+import java.util.List;
+
+
 public interface EmployeeService {
     Employee saveEmployee(Employee employee);
-    Iterable<Employee> getAllEmployees();
-    void deleteEmployee(Integer id);
-    Employee getEmployee(Integer id);
+    List<Employee> getAllEmployees();
+    Employee getEmployeeById(long id);
+    Employee updateEmployee(Employee employee, long id);
+    void deleteEmployee(long id);
 }
